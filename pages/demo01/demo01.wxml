@@ -1,0 +1,122 @@
+<!--pages/demo01/demo01.wxml-->
+
+<!-- 
+    text标签：相当于以前Web里面的 span标签 行内元素，默认不换行
+    view标签：相当于以前Web里面的 div标签  块级元素  默认换行
+    checkbox   复选框
+-->
+<!-- <text>123</text>
+<text>123</text>
+<view>321</view>
+<view>654</view> -->
+
+<!-- 数据绑定 字符串 -->
+<view class="" hover-class="none" hover-stop-propagation="false">
+    {{msg}}
+</view>
+
+<!-- 数据绑定  数字 -->
+<view class="" hover-class="none" hover-stop-propagation="false">
+    {{num}}
+</view>
+
+<!-- 数据绑定  bool类型 -->
+<view class="" hover-class="none" hover-stop-propagation="false">
+    是否是伪娘：{{isGirl}}
+</view>
+
+<!-- 数据绑定  object类型 -->
+<view>{{prosn.age}}</view>
+<view>{{prosn.size}}</view>
+<view>{{prosn.height}}</view>
+
+<!-- 数据绑定  在标签中属性的使用 -->
+<view data-num ="{{num}}">自定义属性标签</view>
+
+<!-- 
+    使用bool类型充当属性 
+    字符串和花括号之间一定不要存在空格，不然会导致识别失败
+-->
+<view>
+    <checkbox checked="{{checkd}}"></checkbox>
+</view>
+
+<!-- 运算  ==>表达式 
+        1.可以在或括号中加入表达式 -- “语句”
+        2.表达式是一些简单的运算 数字运算 字符串拼接  逻辑运算。。。
+            1.数字的加减...
+            2.字符串拼接
+            3.三元表达式
+        3. 语句
+            1.复杂的代码段
+                1.if else
+                2. suitch 
+                3. do while
+                4. for
+-->
+
+<!-- 数字运算 -->
+<view>{{1+1}}</view>
+  
+<!-- 字符串拼接 -->
+<view>
+    {{'1'+'1'}}
+</view>
+  
+<!-- 三目运算 -->
+<view>
+    {{11%2==0 ? '偶数' : '奇数'}}
+</view>
+  
+<!-- 
+    列表循环
+        1.wx:for={{数组或对象}}   wx:for-item="循环项的名称"  wx:for-index="循环项的索引"
+        2.wx:Key="唯一的值" 用来提高列表渲染的性能
+            1.wx:Key绑定一个普通的字符串的时候 那么这个字符串名称肯定是循环数组中的唯一属性
+            2.wx:Key="*this" 就表示你的数组是一个普通的数组 *this就表示手机循环项  比如：
+                [1,2,3,4]
+                ["11","333","4242"]
+            3.当出现数组的嵌套循环的时候，尤其要注意以下绑定的名称不要重名
+                wx:for-item="item"   wx:for-index="index"
+            4.默认情况下，我们不写wx:for-item="item"   wx:for-index="index" 小程序也会把
+            循环项的名称和索引的名称叫做item和index；只有一层循环的话（wx:for-item="item"   wx:for-index="index"）可以省略
+ -->
+<view>
+    <view
+    wx:for="{{list}}"
+    wx:key="id">
+     索引：{{index}}
+        -----
+     值：{{item.name}}
+    </view>
+</view>
+  
+<!-- 
+    对象循环 
+        1 wx:for="{{对象}}"  wx:for-item="对象的值"  wx:for-index="对象的属性"
+        2 循环的时候最好把item和index的名称都修改以下
+            wx:for-item="value"  wx:for-index="Key"
+ -->
+
+
+<view>
+    <view>对象循环</view>
+    <view 
+    wx:for="{{prosn}}"
+    wx:for-item="value"
+    wx:for-index="Key"
+    wx:key="age"
+    >
+    属性：{{Key}}
+    --
+    值：{{value}}
+    </view>
+</view>
+  
+<!-- 
+    block 标签
+        1 占位符标签
+        2 写代码的时候可以看到标签存在
+        3 在页面渲染的时候小程序会把他移除掉
+ -->
+
