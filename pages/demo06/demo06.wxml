@@ -1,0 +1,10 @@
+<!-- 
+    1 在微信小程序中，只有text标签支持长按复制操作  
+        实现长按复制操作只需要在text标签内添加 selectable 属性即可
+    2 对文本内容实现解码decode
+
+
+ -->
+<text selectable decode>
+    长按复制&nbsp;123&lt;
+</text>

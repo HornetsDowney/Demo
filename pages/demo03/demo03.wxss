@@ -1,0 +1,16 @@
+/* 
+1 小程序中不需要主动来引入样式文件，只需要保持文件名相同，小程序就会自动寻找样式文件：比如 dome03.wxml ==> dome03.wxss 
+2 需要把页面中的某些元素的单位由 px 修改为 rpx
+3 位置宽度、高度，使用calc方法进行计算 例如：
+    width:calc(740rpx * 100 / value)
+ calc语法规范：
+    1 750和rpx中间不要留空格
+    2 运算符的两比边也不要例空格
+*/
+
+view{
+    width: 200px;
+    height: 200px;
+    font-size: 40px;
+    background-color: aqua;
+}
