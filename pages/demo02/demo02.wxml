@@ -1,0 +1,25 @@
+<!-- 1 需要给input标签绑定 input事件
+        绑定关键字 bindinput
+    2 如何获取输入框的值
+        通过事件源对象获取的
+        e.detail.value
+    3 把输入框的值赋值到data中
+     微信小程序规定不能直接写
+      1 this.data.num=e.detail.value
+      2 this.num=e.detail.value
+    微信小程序正确写法
+     this.setData({
+         num:e.detail.value
+     })
+
+    4 需要给按钮加入一个点击事件
+        1 bindtap
+        2 无法在小程序事件中直接传参
+        3 需要通过自定义属性的方式来传递参数
+        4 定义好自定义属性后，就可以在事件源中获取自定义属性 -->
+<!-- 个人错误记录：
+      把e.detail.value 写成了 e.datail.value 导致获取imput框输入数据报错：value值没有定义 -->
+<input type="text" bindinput="handInput" />
+<button bindtap="handletap" data-operation="{{1}}">+</button>
+<button bindtap="handletap" data-operation="{{-1}}">-</button>
+<view>{{num}}</view>

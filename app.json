@@ -1,11 +1,12 @@
 {
   "pages":[
+    "pages/demo02/demo02",
+    "pages/demo01/demo01",
     "pages/index/index",
     "pages/img/img",
     "pages/mine/mine",
     "pages/search/search",
-    "pages/logs/logs",
-    "pages/demo01/demo01"
+    "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
