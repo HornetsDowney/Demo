@@ -1,0 +1,8 @@
+image{
+    /* 背景模式 */
+    box-sizing: border-box; 
+    /* 边框  */
+    border: 1px solid red;
+
+    width: 300px;
+}

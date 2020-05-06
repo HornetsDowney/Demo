@@ -1,0 +1,7 @@
+<!-- 
+    image 图片标签
+     1 src属性：指定要家在的图片的路径
+       土豆图床上传的图片地址 https://pics.images.ac.cn/image/5eb1676ee3810.html
+       图片存在默认的宽度和高度  320 * 240 原图大小 200 * 100 
+ -->
+ <image src="https://pics.images.ac.cn/image/5eb1676ee3810.html" />
