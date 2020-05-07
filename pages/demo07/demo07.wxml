@@ -3,5 +3,10 @@
      1 src属性：指定要家在的图片的路径
        土豆图床上传的图片地址 https://pics.images.ac.cn/image/5eb1676ee3810.html
        图片存在默认的宽度和高度  320 * 240 原图大小 200 * 100 
+     2 mode 决定图片的内容如何和让图片标签的宽高进行适配
+       详细文档地址：https://developers.weixin.qq.com/miniprogram/dev/component/image.html
+       aspectFit  常用作页面轮播图
+     3 小程序中的图片默认支持懒加载，关键字：lazy-load
+       lazy-load 会自己判断，当图片出现在视图窗口上下三瓶的高度之内的时候，自己开始加载图片
  -->
- <image src="https://pics.images.ac.cn/image/5eb1676ee3810.html" />
+ <image mode="aspectFile" lazy-load src="https://pics.images.ac.cn/image/5eb1676ee3810.html" />
