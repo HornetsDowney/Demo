@@ -1,0 +1,19 @@
+<!-- 
+    导航组件  navigator
+     0 navigator是块级元素，默认换行  可以直接加入宽度和高度
+     1 url要跳转的路径  可以是绝对路径，也可以是相对路径
+     2 target 要跳转当前小程序或跳转其他小程序页面
+        self  当前小程序页面
+        miniProgram 其他小程序页面
+     3 open-type 跳转方式
+        navigate 默认值  保留当前页面，跳转到应用内的某个页面，但是不能跳转到tabber页面
+        rdirect  关闭当前页面，跳转到应用内的某个页面，但是不能跳转到tabber页面
+        switchTab 跳转到tabber页面，并关闭其他所有飞tabber页面
+        reLauunch 关闭所有页面，打开到应用内的某个页面
+        navigateBack 关闭当前页面，返回上移以恶面或多级页面。可以通过getCurrentPages()获取当前的页面栈，决定需要返回几层
+        exit 退出小程序，target=“miniProgram”时生效
+ -->
+<navigator url="/pages/demo08/demo08"> 跳转到轮播图界面 </navigator>
+<navigator open-type="redirect" url="/pages/demo08/demo08"> 跳转到轮播图界面   rdirect </navigator>
+<navigator open-type="switchTab" url="/pages/index/index"> 跳转到首页 </navigator>
+

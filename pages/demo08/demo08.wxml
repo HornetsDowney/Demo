@@ -18,7 +18,7 @@
     10 indicator-active-color   当前选中的指示点颜色
  -->
 
-<swiper autoplay="{{true}}"  interval="1000" circular="{{true}}" indicator-dots="{{true}}" indicator-color="#0094ff" indicator-active-color="#ff0094">
+<swiper autoplay="{{true}}"  interval="3000" circular="{{true}}" indicator-dots="{{true}}" indicator-color="#0094ff" indicator-active-color="#ff0094">
     <swiper-item><image mode="widthFix" src="https://aecpm.alicdn.com/simba/img/TB183NQapLM8KJjSZFBSutJHVXa.jpg" /></swiper-item>
     <swiper-item><image mode="widthFix" src="https://aecpm.alicdn.com/simba/img/TB1JNHwKFXXXXafXVXXSutbFXXX.jpg" /></swiper-item>
     <swiper-item><image mode="widthFix" src="https://aecpm.alicdn.com/simba/img/TB1XotJXQfb_uJkSnhJSuvdDVXa.jpg" /></swiper-item>

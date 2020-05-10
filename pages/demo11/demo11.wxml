@@ -1,0 +1,46 @@
+<!-- 
+    button 标签
+        具体文档：https://developers.weixin.qq.com/miniprogram/dev/component/button.html
+    1 外观属性
+     1 size 按钮的大小
+     2 type 按钮的样式类型
+     3 plain 按钮是否镂空，背景色透明
+     4 disbled 是否金庸
+     5 loading 名称钱是否待loading图标
+
+
+ -->
+
+ <button>默认按钮</button>
+ <button size="mini">小尺寸按钮</button>
+ <button plain >默认按钮</button>
+
+<!-- 
+    button 按钮的开放能力
+    open-type：https://developers.weixin.qq.com/miniprogram/dev/component/button.html
+        contact 直接打开客服对话功能，需要在微信小程序后台进行配置
+        share 转发当前小程序到微信朋友   不能把小程序分享到朋友圈中
+        getPhoneNumber 获取当前用户的手机号信息  需要结合一个事件使用 。 如果不是企业的小程序账号，是没有权限获取用户的手机号码
+           1  绑定一个事件：bindgetphonenumber
+           2  在事件的回调函数中，通过参数获取信息
+           3  获取到的信息是加密过的信息 
+                需要用户自己搭建小程序的后台服务器，在后台服务器中进行解析手机号码，返回到小程序中就可以看到信息
+        getUserInfo  获取当前用户的个人信息:bindgetuserinfo 
+           1 使用方法类似获取用户手机号
+           2 可以直接获取不存在加密字段
+        launchApp 在小程序中直接打开APP
+           1 需要现在APP中，通过APP的某个链接打开小程序
+           2 在小程序中再通过这个功能重新打开APP
+        openSetting 打开小程序内置的授权页面
+           1 授权页面中只会出现用户曾经点击过的权限
+        feedback 打开小程序内的意见反馈页面
+        
+ -->
+
+ <button open-type="contact">contact</button>
+ <button open-type="share">share</button>
+ <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">getPhoneNumber</button>
+ <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">getUserInfo</button>
+ <button open-type="launchApp">launchApp</button>
+ <button open-type="openSetting">openSetting</button>
+ <button open-type="feedback">feedback</button>
