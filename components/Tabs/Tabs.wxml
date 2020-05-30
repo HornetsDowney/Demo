@@ -1,0 +1,19 @@
+<view class="tabs">
+    <views class="tabs_title">
+        <!-- <view class="title_item active">首页</view>
+        <view class="title_item">原创</view>
+        <view class="title_item">分类</view>
+        <view class="title_item">关于</view> -->
+
+        <!-- item.isAcive?'active':'' 进行判断，如果选中标题就显示actice样式，如果没有选中，就不显示 -->
+        <view 
+        wx:for="{{tabs}}"
+        wx:key="id"
+        class="title_item {{item.isAcive?'active':''}}"
+        bindtap="hanldeItenTap"
+        >
+            {{item.name}}
+        </view>
+    </views>
+    <view class="tabs_content">内容</view>
+</view>
