@@ -16,5 +16,11 @@
             {{item.name}}
         </view>
     </views>
-    <view class="tabs_content">内容</view>
+    <view class="tabs_content">
+        <!--
+            slot 标签其实就是一个占位符 插槽
+            等到父组件调用子组件的时候，在传递标签过来，最终这些被传递的标签就会替换slot插槽的位置
+        -->
+        <slot></slot>
+    </view>
 </view>
