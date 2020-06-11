@@ -1,10 +1,12 @@
-.tabs{}
-.tabs_title{
+.tabs {}
+
+.tabs_title {
     /* 伸缩盒子 */
-    display: flex; 
+    display: flex;
     padding: 10rpx 0;
 }
-.title_item{
+
+.title_item {
     flex: 1;
     display: flex;
     /* 水平对齐 */
@@ -12,8 +14,10 @@
     /* 垂直对齐 */
     align-self: center;
 }
-.active{
+
+.active {
     color: red;
     border-bottom: 5rpx solid currentColor;
 }
-.tabs_content{}
+
+.tabs_content {}
